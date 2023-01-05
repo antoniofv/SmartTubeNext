@@ -94,7 +94,7 @@ public class SignInFragment extends GuidedStepSupportFragment implements SignInV
 
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
-        GuidedAction login = new GuidedAction.Builder()
+        GuidedAction login = new GuidedAction.Builder(getContext())
                 .id(CONTINUE)
                 .title(getString(R.string.signin_view_action_text))
                 .build();
