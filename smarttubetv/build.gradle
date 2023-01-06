@@ -18,7 +18,7 @@ buildscript {
         // Add the Crashlytics Gradle plugin.
         // https://firebase.google.com/docs/crashlytics/get-started?platform=android
         // https://firebase.google.com/docs/android/setup
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1'
+//        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1'
     }
 }
 
@@ -31,7 +31,7 @@ if (new File("${projectDir}/google-services.json").exists() && (getGradle().getS
     apply plugin: 'com.google.gms.google-services'
 
     // Apply the Crashlytics Gradle plugin
-    apply plugin: 'com.google.firebase.crashlytics'
+//    apply plugin: 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -215,9 +215,9 @@ dependencies {
 
     // Add the Firebase Crashlytics SDK.
 
-    stbetaImplementation('com.google.firebase:firebase-crashlytics:' + firebaseCrashlyticsVersion) {
-        transitive = true
-    }
+//    stbetaImplementation('com.google.firebase:firebase-crashlytics:' + firebaseCrashlyticsVersion) {
+//        transitive = true
+//    }
 
     strtarmeniaImplementation('com.google.firebase:firebase-crashlytics:' + firebaseCrashlyticsVersion) {
         transitive = true
