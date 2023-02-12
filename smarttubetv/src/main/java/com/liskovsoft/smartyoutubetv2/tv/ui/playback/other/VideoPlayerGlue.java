@@ -173,6 +173,35 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_REPEAT_MODE)) {
             adapter.add(mActions.get(R.id.action_repeat));
         }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SUBTITLES)) {
+            adapter.add(mClosedCaptioningAction);
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_INFO)) {
+            adapter.add(mVideoInfoAction);
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_ADD_TO_PLAYLIST)) {
+            adapter.add(mPlaylistAddAction);
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_HIGH_QUALITY)) {
+            adapter.add(mHighQualityAction);
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SUBSCRIBE)) {
+            adapter.add(mActions.get(R.id.action_subscribe));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_OPEN_CHANNEL)) {
+            adapter.add(mActions.get(R.id.action_channel));
+        }
+    }
+
+    @Override
+    protected void onCreateSecondaryActions(ArrayObjectAdapter adapter) {
+        // Does nothing
+        super.onCreateSecondaryActions(adapter);
+
+        // MAX: 7 items. But with custom modification it supports more.
+        // Origin: {@link androidx.leanback.widget.ControlBarPresenter#MAX_CONTROLS}
+        // Custom mod: {@link com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.ControlBarPresenter#MAX_CONTROLS}
+
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_SPEED)) {
             adapter.add(mVideoSpeedAction);
         }
@@ -203,46 +232,14 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_ROTATE)) {
             adapter.add(mActions.get(R.id.action_rotate));
         }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SOUND_OFF)) {
-            adapter.add(mActions.get(R.id.action_sound_off));
-        }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_AFR)) {
             adapter.add(mActions.get(R.id.action_afr));
-        }
-    }
-
-    @Override
-    protected void onCreateSecondaryActions(ArrayObjectAdapter adapter) {
-        // Does nothing
-        super.onCreateSecondaryActions(adapter);
-
-        // MAX: 7 items. But with custom modification it supports more.
-        // Origin: {@link androidx.leanback.widget.ControlBarPresenter#MAX_CONTROLS}
-        // Custom mod: {@link com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.ControlBarPresenter#MAX_CONTROLS}
-
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_HIGH_QUALITY)) {
-            adapter.add(mHighQualityAction);
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_OPEN_CHANNEL)) {
-            adapter.add(mActions.get(R.id.action_channel));
         }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_LIKE)) {
             adapter.add(mThumbsUpAction);
         }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_DISLIKE)) {
             adapter.add(mThumbsDownAction);
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SUBTITLES)) {
-            adapter.add(mClosedCaptioningAction);
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_ADD_TO_PLAYLIST)) {
-            adapter.add(mPlaylistAddAction);
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SUBSCRIBE)) {
-            adapter.add(mActions.get(R.id.action_subscribe));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_INFO)) {
-            adapter.add(mVideoInfoAction);
         }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_PLAYBACK_QUEUE)) {
             adapter.add(mPlaybackQueueAction);
@@ -252,6 +249,15 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_STATS)) {
             adapter.add(mVideoStatsAction);
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SOUND_OFF)) {
+            adapter.add(mActions.get(R.id.action_sound_off));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_AFR)) {
+            adapter.add(mActions.get(R.id.action_afr));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SOUND_OFF)) {
+            adapter.add(mActions.get(R.id.action_sound_off));
         }
     }
 
