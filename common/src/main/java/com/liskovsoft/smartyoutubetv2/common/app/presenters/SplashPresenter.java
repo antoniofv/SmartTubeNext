@@ -25,7 +25,7 @@ import com.liskovsoft.smartyoutubetv2.common.misc.StreamReminderService;
 import com.liskovsoft.smartyoutubetv2.common.prefs.AccountsData;
 import com.liskovsoft.smartyoutubetv2.common.prefs.GeneralData;
 import com.liskovsoft.smartyoutubetv2.common.proxy.ProxyManager;
-import com.liskovsoft.smartyoutubetv2.common.utils.CustomInit;
+//import com.liskovsoft.smartyoutubetv2.common.utils.CustomInit;
 import com.liskovsoft.smartyoutubetv2.common.utils.IntentExtractor;
 import com.liskovsoft.smartyoutubetv2.common.utils.SimpleEditDialog;
 import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
@@ -90,7 +90,7 @@ public class SplashPresenter extends BasePresenter<SplashView> {
             initProxy();
             initVideoStateService();
             initStreamReminderService();
-            CustomInit.init(getContext());
+//            CustomInit.init(getContext());
         }
     }
 
